@@ -1,4 +1,3 @@
-# yatube_project
 **Prices of goods**
 
 **Описание**
