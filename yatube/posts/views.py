@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import HttpResponse
 
-# Create your views here.
+
+# Главная страница
+def index(request):
+    return HttpResponse('Главная страница')
+
+
+# Страница с записью
+def group_posts_page(request, slug):
+    return HttpResponse(f'Какая-то запись {slug}')
