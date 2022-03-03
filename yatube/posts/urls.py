@@ -1,10 +1,9 @@
 from django.urls import path
 from . import views
 
+app_name = 'posts'
+
 urlpatterns = [
-    # Главная страница
-    path('', views.index),
-    # Страница сообщества group
-    # Конвертор slug ожидает строку из букв и цифр
-    path('group/<slug:slug>/', views.group_posts),
+    path('', views.index, name='posts'),
+    path('group/<slug:slug>/', views.group_posts, name='group_posts'),
     ]
