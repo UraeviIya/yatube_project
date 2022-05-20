@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 ]
 
 ROOT_URLCONF = 'yatube.urls'
+WSGI_APPLICATION = 'yatube.wsgi.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
