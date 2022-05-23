@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
+{% load static %}
  {% block content %}
+
+ 
     <div class="container py-5">
       <h1>Последние обновления на сайте</h1>
         <article>
@@ -15,7 +17,7 @@
             </ul>
             <p>{{ post.text }}</p>
             {% if post.group %}
-            <a class="btn" href="{% url 'posts:group_posts' post.group.slug %}">все записи группы</a>
+            <a  class="btn" href="{% url 'posts:group_posts' post.group.slug %}">все записи группы</a>
             {% endif%}
             {% if not forloop.last %}<hr>{% endif %}
           {% endfor %}
